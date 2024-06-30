@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Conditionals</title>
+    </head>
+    <body>
+        <p th:if="${sales > 50}">Sales are perfecto!</p>
+        <p th:unless="${sales > 50}">Sales suck!</p>
+        <p th:text="${sales > 50} ? 'You are great!':'You suck too :('"></p>
+
+        <div th:switch="${product}">
+            <p th:case="kitap">Kitap satılık knk</p>
+            <p th:case="*">Bittik</p>
+
+    </body>
+</html>
