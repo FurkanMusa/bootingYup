@@ -7,23 +7,24 @@
   <body>
 
     <div class="topnav">
-      <a>Form</a>
-      <a>Grades</a>
+      <a th:href="@{/}">Form</a>
+      <a th:href="@{/grades}">Grades</a>
     </div>
 
     <div class= "container">
-      <h2 > Grades </h2>
+      <h2> Grades </h2>
+      <h3 th:if="${status} == 'success'"> Successfully created new grade! </h3>
       <table id="table"> 
         <tr>
           <th>Student</th>
           <th>Subject</th>
           <th>Score</th>
         </tr>
-        <tr th:each="grade: ${grade}">
+        <tr th:each="grade: ${grade}" th:title="${grade.id}">
           <td th:text="${grade.name}"></td>
           <td th:text="${grade.subject}"></td>
           <td th:text="${grade.score}"></td>
-          <td> <a role="button" class="update" th:href="@{/(name=${grade.name})}" >Update</a> </td>
+          <td> <a role="button" class="update" th:href="@{/(id=${grade.id})}" >Update</a> </td>
         </tr>
       </table>
     </div>
