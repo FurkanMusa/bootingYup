@@ -15,12 +15,12 @@ public class GradeService {
     @Autowired
     GradeRepository gradeRepository;
     
-    public Grade getGrade(int index) {
-        return gradeRepository.getGrade(index);
-    }
-
     public void addGrade(Grade grade) {
         gradeRepository.addGrade(grade);;
+    }
+
+    public Grade getGrade(int index) {
+        return gradeRepository.getGrade(index);
     }
 
     public void updateGrade(Grade grade, int index) {

@@ -1,4 +1,4 @@
-package com.ltp.gradesubmission.pojo;
+package com.ltp.gradesubmission.pojo; // pojo stands for Plain Old Java Object
 
 import java.util.UUID;
 
